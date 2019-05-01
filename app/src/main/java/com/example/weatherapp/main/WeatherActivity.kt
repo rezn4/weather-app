@@ -188,7 +188,8 @@ class WeatherActivity : AppCompatActivity(), WeatherView {
             if (resultCode == Activity.RESULT_OK) {
                 val latitude = data?.getDoubleExtra(LATITUDE_KEY, 0.0)
                 val longitude = data?.getDoubleExtra(LONGITUDE_KEY, 0.0)
-                refreshWeatherData(latitude!!, longitude!!)
+                presenter.onSelectLocation(latitude!!, longitude!!)
+                setWeatherDataByPosition(weeklyAdapter.currentPosition)
             } else if (resultCode == Activity.RESULT_CANCELED) {
                 setWeatherDataByPosition(weeklyAdapter.currentPosition)
             }
@@ -213,11 +214,6 @@ class WeatherActivity : AppCompatActivity(), WeatherView {
             0 -> presenter.loadWeather(date, position)
             else -> presenter.loadWeather(START_OF_THE_DAY.toLong(), position)
         }
-    }
-
-    private fun refreshWeatherData(latitude: Double, longitude: Double) {
-        presenter.onSelectLocation(latitude, longitude)
-        presenter.loadWeather(0, weeklyAdapter.currentPosition)
     }
 
     private fun initializeWeeklyAdapter() {
