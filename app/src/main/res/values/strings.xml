@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="degree_symbol">°</string>
+    <string name="percent_symbol">%</string>
+    <string name="speed_symbol">м/сек</string>
+    <string name="settings">Settings</string>
+    <string name="access_denied_permission">Доступ не предоставлен</string>
+    <string name="permission_settings_text">Настройки</string>
+    <string name="permission_back_text">Назад</string>
+    <string name="permission_rationale_text">Некоторый функционал будет заблокирован, если вы не предоставите доступ
+    </string>
+    <string name="permission_permadenied_text">Приложение все еще не может работать без доступа к локации. Откройте, пожалуйста, настройки
+        и предоставьте доступ вручную
+    </string>
+    <string name="google_api_key">AIzaSyCp34JZHSCjAj2DNsQDG1JHGVNlThCw0iY</string>
+    <string name="choose_city_dialog">Выбрать город из списка</string>
+    <string name="retry_text">Попробовать еще раз</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="hourly_item_minutes">00</string>
+</resources>
