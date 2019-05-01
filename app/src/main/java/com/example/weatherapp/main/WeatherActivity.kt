@@ -32,7 +32,6 @@ import java.util.*
 
 
 class WeatherActivity : AppCompatActivity(), WeatherView {
-
     companion object {
         const val WEEKLY_ADAPTER_POSITION = "WEEKLYADAPTERPOSITION"
         const val CLOUDS = "Clouds"

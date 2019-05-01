@@ -73,7 +73,7 @@ class WeatherPresenterImpl(private val weatherView: WeatherView,
                 .subscribe(
                     {
                         weatherView.showWeeklyWeather(it.list.filter { item ->
-                            getDayOfWeek(item.date) >= getDayOfWeek(date)
+                            item.date >= date
                         })
                     },
                     {
